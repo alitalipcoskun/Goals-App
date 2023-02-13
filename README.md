@@ -15,6 +15,11 @@ After entering the goal, user can press "Add Goal" button for adding the goal. "
 
 ![Screenshot_435](https://user-images.githubusercontent.com/51987890/218552814-92b70a83-a7c6-4603-bbb2-f2e1ca37acd3.png)
 
-App works just like the images. 
+App works just like the images.
+On the other hand, if user tries to add an "empty goal", then App will warn the user with the help of inline CSS. It is not the best way to give the user a feedback.
+
+
+![Screenshot_436](https://user-images.githubusercontent.com/51987890/218558188-7412e35f-b9e5-4300-8ce2-335e54f2c97c.png)
+
 
 Thank you for reading!
