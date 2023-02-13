@@ -1,0 +1,9 @@
+.goals-list ul{
+    list-style-type: none;
+}
+.goals-list{
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
