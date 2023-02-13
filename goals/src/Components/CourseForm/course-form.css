@@ -28,6 +28,9 @@
     padding-bottom: 50px;
 }
 .goal-form__header{
+    font-size: 20px;
+    margin: 20px;
+    font-weight: 700;
     color: black;
     align-items: left;
     text-align: left;
