@@ -25,6 +25,7 @@ function CourseForm(props) {
     function goalHandler(event) {
         setUserInput({
             goal: event.target.value,
+            id: Math.random(),
         });
     }
     function submissionHandler(event) {
@@ -32,7 +33,6 @@ function CourseForm(props) {
         setUserInput((prevState) => (
             [{
                 ...prevState,
-                id: Math.random(),
             }]
         ))
         if (userInput.goal.trim().length === 0) {

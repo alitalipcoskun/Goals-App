@@ -13,14 +13,20 @@ function App() {
   const [goals, setGoals] = useState(DUMMY_GOALS);
   function dataHandler(data){
     setGoals((prevData) => {
-      return [...prevData, data]
+      return [data,...prevData]
+    });
+  }
+  function deleteHandler(goalId){
+    setGoals((prevGoals) => {
+      const updatedGoals = prevGoals.filter((goal) => goal.id !== goalId);
+      return updatedGoals;
     });
   }
 
   return (
     <div className="App">
       <CourseForm getGoalData = {dataHandler}></CourseForm>
-      <GoalList value = {goals}></GoalList>
+      <GoalList value = {goals} deleteFunction = {deleteHandler}></GoalList>
     </div>
   );
 }

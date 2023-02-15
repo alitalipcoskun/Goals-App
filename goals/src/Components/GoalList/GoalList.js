@@ -7,17 +7,21 @@ import './goal-list.css';
 
 
 function GoalList(props){
-    const outputGoals = props.value.map((item) => (
-        <Goal goal = {item.goal} key={item.id}></Goal>
-    ))
+    const deletingItem = (goalId) => {
+        props.deleteFunction(goalId);
+    }
     const keys = props.value.map((item) => (
         item.id
     ));
+    const outputGoals = props.value.map((item, index) => (
+        <Goal goal = {item.goal} key={item.id} onDelete = {deletingItem} id = {keys[index]}></Goal>
+    ))
+    
 
     return (<div className="goals-list">
         <ul>
             {outputGoals.map((goal, index) => (
-                <li key= {keys[index]}>{goal}</li>
+                <li id = {keys[index]}key= {keys[index]} onClick= {deletingItem}>{goal}</li>
             ))}
         </ul>        
     </div>)

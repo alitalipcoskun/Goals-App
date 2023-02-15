@@ -3,11 +3,16 @@ import React from "react";
 import './goal.css'
 
 function Goal(props){
-    return(<div className="goal">
-        <div className="goal-item">
+    const deleteItemHandler = () => {
+        props.onDelete(props.id)
+    }
+
+
+    return(
+        <div className="goal-item" onClick={deleteItemHandler}>
             <p>{props.goal}</p>
         </div>
-    </div>)
+    )
 }
 
 
