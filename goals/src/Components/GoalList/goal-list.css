@@ -4,6 +4,12 @@
 .goals-list{
     text-align: left;
     margin-top: 50px;
-    margin-left: 20%;
+    margin-left: 15%;
     margin-right: 20%;
+}
+@media (max-width: 500px) {
+        .goals-list{
+            margin: 0;
+            margin-right: 10%;
+        }
 }

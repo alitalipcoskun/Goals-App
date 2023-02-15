@@ -12,7 +12,6 @@ function CourseForm(props) {
     }
     function formCloser(event) {
         event.preventDefault();
-        setIsValid(true);
         formHandler(false);
     }
     let form = (
@@ -51,10 +50,10 @@ function CourseForm(props) {
 
     if (formChecker) {
         form = (<form className="goal-form" onSubmit={submissionHandler}>
-            <div className="goal-form__container">
-                <label className="goal-form__header" style={{ color: !isValid ? 'red' : 'black' }}>Course Goal</label>
-                <div className="goal-form__submission">
-                    <input type={"text"} className="goal-input" onChange={goalHandler} value={userGoal} style={{ background: !isValid ? 'salmon' : 'transparent', borderColor: !isValid ? 'red' : '#ccc' }}></input>
+            <div className={`goal-form__container ${!isValid ? 'invalid' : ''}`}>
+                <label className="goal-form__header">Course Goal</label>
+                <div className={`goal-form__submission ${!isValid ? 'invalid' : ''}`}>
+                    <input type={"text"} className="goal-input" onChange={goalHandler} value={userGoal}></input>
                     <div className="goal-form__buttons">
                         <button type="submit" className="goal-submission">Add Goal</button>
                         <button className="goal-back" onClick={formCloser}>Cancel</button>
