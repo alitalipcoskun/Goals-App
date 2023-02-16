@@ -10,7 +10,7 @@ function Goal(props){
 
     return(
         <div className="goal-item" onClick={deleteItemHandler}>
-            <p>{props.goal}</p>
+            <p>{props.children}</p>
         </div>
     )
 }

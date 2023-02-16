@@ -25,7 +25,7 @@ function CourseForm(props) {
     function goalHandler(event) {
         setUserInput({
             goal: event.target.value,
-            id: Math.random(),
+            id: Math.random().toString(),
         });
     }
     function submissionHandler(event) {
@@ -42,7 +42,7 @@ function CourseForm(props) {
         props.getGoalData(userInput);
         setUserInput({
             goal: '',
-            id: 0,
+            id: '',
         })
         setIsValid(true);
     }

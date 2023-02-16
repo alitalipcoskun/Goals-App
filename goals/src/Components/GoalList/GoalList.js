@@ -14,7 +14,7 @@ function GoalList(props){
         item.id
     ));
     const outputGoals = props.value.map((item, index) => (
-        <Goal goal = {item.goal} key={item.id} onDelete = {deletingItem} id = {keys[index]}></Goal>
+        <Goal key={item.id} onDelete = {deletingItem} id = {keys[index]}>{item.goal}</Goal>
     ))
     
 
